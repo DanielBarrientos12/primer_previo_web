@@ -1,0 +1,131 @@
+.contenedor {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.logo-img {
+    width: 220px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-estudiante-section{
+    justify-content: flex-start;
+}
+
+.prom-section{
+    justify-content: flex-end;
+    border: 1px solid #000;
+}
+
+.estudiante-label{
+    display: block;
+    font-size: 14px;
+    font-weight: 900;
+    text-align: left;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+.table-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.asignaturas-label {
+    font-size: 14px;
+    color: #f00;
+}
+
+.btn-logout {
+    margin-top: 20px;
+    height: 32px;
+    width: 215px;
+    background-color: #D31024;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    justify-content: flex-end;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+}
+
+thead {
+    background-color: #cfcfcf; 
+}
+
+thead th {
+    border-bottom: 2px solid black; 
+    padding: 10px;
+}
+
+thead th:first-child {
+    width: 40%; 
+    text-align: left; 
+}
+
+
+/* Media queries para dispositivos de tableta */
+@media (max-width: 768px) {
+    .info-estudiante-section,
+    .table-section {
+        padding: 10px;
+        margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .info-estudiante-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table {
+        width: 100%;
+        overflow-x: auto; /* Permite scroll horizontal si la tabla es muy ancha */
+    }
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 480px) {
+    .info-estudiante-section,
+    .table-section {
+        padding: 5px;
+    }
+
+    .info-estudiante-section {
+        display: block;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .asignaturas-label {
+        font-size: 14px;
+    }
+
+    .btn-logout {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+}
