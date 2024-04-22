@@ -33,7 +33,7 @@ window.addEventListener('load', function() {
                     n2Cell.textContent = nota.n2;
                     n3Cell.textContent = nota.n3;
                     exCell.textContent = nota.ex;
-                    defCell.textContent = ((parseFloat(nota.n1) + parseFloat(nota.n2) + parseFloat(nota.n3) + parseFloat(nota.ex)) / 4).toFixed(2); // calculo de las definitivas
+                    defCell.textContent = defintiva(nota.n1, nota.n2, nota.n3, nota.ex).toFixed(2);
 
                     row.appendChild(asignaturaCell);
                     row.appendChild(creditosCell);
@@ -44,7 +44,7 @@ window.addEventListener('load', function() {
                     row.appendChild(defCell);
                     tbody.appendChild(row);
 
-                    document.getElementById('promedio-estudiante').textContent = promedio(nota.n1, nota.n2, nota.n3, nota.ex).toFixed(2); //calculo del promedio
+                    document.getElementById('promedio-estudiante').textContent = promedioPonderado(parseFloat(data.notas[0].def), parseFloat(data.notas[0].creditos), parseFloat(data.notas[1].def), parseFloat(data.notas[1].creditos), parseFloat(data.notas[2].def), parseFloat(data.notas[2].creditos), parseFloat(data.notas[3].def), parseFloat(data.notas[3].creditos), parseFloat(data.notas[4].def), parseFloat(data.notas[4].creditos)).toFixed(2);
                 });
             } else {
                 console.log('No hay notas disponibles para mostrar.');
@@ -60,7 +60,7 @@ document.querySelector('.btn-logout').addEventListener('click', function() {
     window.location.href = '../index.html';
 });
 
-function promedio (n1, n2, n3, ex) {
+function defintiva (n1, n2, n3, ex) {
     return (((parseFloat(n1) + parseFloat(n2) + parseFloat(n3)) / 3) * 0.7) + (parseFloat(ex) * 0.3);
 }
 
