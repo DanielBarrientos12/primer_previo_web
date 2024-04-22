@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/notas.css" />
     <title>Notas estudiante</title>
-</head>
-<body>
-    <p>prueba</p>
-</body>
+  </head>
+  <body>
+    <main>
+      <div>
+        <img
+          class="logo-img"
+          src="../image/image.png"
+          alt="imagen universidad UFPS"
+        />
+      </div>
+      <section class="info-section">
+        <div class="info-estudiante-section">
+          <p class="estudiante-label">Codígo</p>
+          <p id="codigo-estudiante"></p>
+          <p class="estudiante-label">Nombre</p>
+          <p id="nombre-estudiante"></p>
+        </div>
+      </section>
+      <section class="table-section">
+        <p class="asignaturas-label" for="">Relación de asignaturas cursadas</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Asignatura</th>
+              <th>Cre</th>
+              <th>P1</th>
+              <th>P2</th>
+              <th>P3</th>
+              <th>EF</th>
+              <th>DEF</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Los datos de las cartas se cargarán aquí dinámicamente -->
+          </tbody>
+      </section>
+      <div>
+        <button type="button" class="btn-logout">Cerrar sesión</button>
+      </div>
+    </main>
+    <script src="js/index.js"></script>
+  </body>
 </html>
